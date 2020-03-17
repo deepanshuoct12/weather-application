@@ -2,6 +2,7 @@ const path = require('path')  // core path module
 const express  = require('express')
 const app  = express()
 const hbs = require('hbs')
+const port = process.env.PORT || 3000 //1st one is for heroku and second one is for locally if we want to run our app
 // console.log(__dirname)//give folder location i.e path upto src folder
 // console.log(__filename)//give file location i.e path upto app.js
 
@@ -145,6 +146,9 @@ app.get('*',(req,res)=>{   // any request come apart from above all goes here
 // res.send('weather')
 // })
 
-app.listen(3000,()=>{               // server will not stop until we not stop it .and it does not have idea what new changes u have done so we stop and again run server when there is a change
-    console.log('server is hosted on 3000 port')
-})
+// app.listen(3000,()=>{               // server will not stop until we not stop it .and it does not have idea what new changes u have done so we stop and again run server when there is a change
+//     console.log('server is hosted on 3000 port')
+// })
+app.listen(port,()=>{              
+         console.log('server is hosted on 3000 port' + port)//listen on port
+     })
