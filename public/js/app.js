@@ -33,7 +33,7 @@ weatherform.addEventListener('submit',(e)=>{      // e is event when submit even
 
     const location = search.value
 
-message1.textContent = 'LOADING'
+message1.textContent = 'LOADING ....'
 message2.textContent = ''    
 //http://localhost:3000   /..write this in fetch() before /weather..if you want to run from local host 
 fetch('/weather?address=' + location).then((response)=>{

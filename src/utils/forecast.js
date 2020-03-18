@@ -18,8 +18,9 @@ const forecast = (latitude,longitude,callback)=>{
               console.log('unable to find location',undefined)
         }
         else{
+          
           //callback(undefined,response.body.daily.data[0].summary + ' it is currently ' + response.body.currently.temperature + ' degree out there there is '+ response.body.currently.precipProbability + '% chances of rain')
-          callback(undefined,body.daily.data[0].summary + ' it is currently ' + body.currently.temperature + ' degree out there there is '+ body.currently.precipProbability + '% chances of rain')
+          callback(undefined,body.daily.data[0].summary + ' it is currently ' + body.currently.temperature + ' degree out .The high today is '+ body.daily.data[0].temperatureHigh +' with a low of '  + body.daily.data[0].temperatureLow + ' there is '+ body.currently.precipProbability + '% chances of rain')
         }
       })
 }
